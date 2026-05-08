@@ -11,15 +11,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h2 className="text-2xl font-bold text-slate-800 mb-4">Experience</h2>
-            <div className="space-y-6">
-              <div className="border-l-4 border-blue-600 pl-6">
-                <h3 className="text-xl font-bold text-slate-900">Rockstar Games</h3>
-                <p className="text-slate-600">2022 - Present</p>
-                <p className="text-slate-700 mt-2">
-                  Senior Frontend Developer working on AAA game titles and gaming platforms.
-                </p>
-              </div>
-              
+            <div className="space-y-6">              
               <div className="border-l-4 border-slate-300 pl-6">
                 <h3 className="text-xl font-bold text-slate-900">Previous Experience</h3>
                 <p className="text-slate-600">8+ years in various companies</p>
