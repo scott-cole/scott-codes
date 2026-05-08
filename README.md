@@ -64,24 +64,6 @@ npm i -g vercel
 vercel
 ```
 
-### Other Platforms
-- **Netlify**: Drag and drop build folder
-- **GitHub Pages**: Configure GitHub Actions
-- **Railway**: Connect repository
-
-## 📝 Customization
-
-### Update Your Information
-- Edit `app/page.tsx` for hero section
-- Update `app/about/page.tsx` for bio and experience
-- Modify `app/projects/page.tsx` for your projects
-- Update contact email in `app/contact/page.tsx`
-
-### Styling
-- All styles use Tailwind CSS
-- Modify `tailwind.config.js` for custom theme
-- Update colors and fonts in `app/globals.css`
-
 ## 🔧 Features
 
 - ✅ Responsive design (mobile, tablet, desktop)
@@ -92,11 +74,5 @@ vercel
 - ✅ Contact form ready
 - ✅ Project showcase
 - ✅ Social links
-
-## 📄 License
-
-MIT License - Free to use for your portfolio.
-
----
 
 Built with Next.js 14 and Tailwind CSS
