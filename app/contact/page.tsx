@@ -10,9 +10,9 @@ export default function Contact() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h2 className="text-2xl font-bold text-slate-800 mb-6">Let's Work Together</h2>
+            <h2 className="text-2xl font-bold text-slate-800 mb-6">Let&apos;s Work Together</h2>
             <p className="text-slate-600 mb-8">
-              I'm available for freelance projects, consulting, and contract work. 
+              I&apos;m available for freelance projects, consulting, and contract work. 
               With 10+ years of experience, I can help you build 
               scalable, performant web applications.
             </p>
