@@ -36,7 +36,6 @@ export default function Contact() {
                   github.com/scott-cole
                 </a>
               </div>
-              
               <div>
                 <h3 className="font-bold text-slate-900 mb-2">LinkedIn</h3>
                 <a
