@@ -12,7 +12,7 @@ module.exports = {
         display: ['var(--font-display)', 'system-ui', 'sans-serif'],
       },
       colors: {
-        caribbean: '#06b6d4',
+        caribbean: '#3b82f6',
         charcoal: '#1a1a1a',
         midnight: '#0d0d0d',
       },

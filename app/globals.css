@@ -4,13 +4,17 @@
 
 @layer base {
   :root {
-    --caribbean: #06b6d4;
+    --caribbean: #3b82f6;
     --charcoal: #1a1a1a;
     --midnight: #0d0d0d;
   }
   
   body {
     @apply bg-midnight text-slate-200 antialiased;
+  }
+
+  ::selection {
+    @apply bg-blue-500/30 text-white;
   }
 }
 
@@ -51,10 +55,26 @@
   }
   
   .button-primary {
-    @apply bg-cyan-500 hover:bg-cyan-600 text-white;
+    @apply bg-blue-500 hover:bg-blue-600 text-white;
   }
   
   .button-outline {
     @apply border-2 border-slate-400 text-slate-300 hover:bg-slate-800 hover:border-slate-300;
+  }
+
+  .card {
+    @apply bg-charcoal border border-slate-800 rounded-2xl hover:border-caribbean/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10;
+  }
+
+  .tag {
+    @apply px-3 py-1 bg-midnight text-caribbean text-sm font-mono rounded-full border border-slate-800;
+  }
+
+  .section-label {
+    @apply text-caribbean font-mono uppercase tracking-wider text-sm;
+  }
+
+  .section-title {
+    @apply text-4xl lg:text-5xl font-display font-bold text-white mt-4;
   }
 }
