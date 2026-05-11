@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: 'I help companies improve their React applications through performance optimization, codebase cleanup, and architecture improvements.',
     images: [
       {
-        url: '/images/avatar.png',
+        url: '/images/avatar.webp',
         width: 1536,
         height: 1024,
         alt: 'Scott Cole - Software Engineer',
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Scott Cole | Senior Software Engineer',
     description: 'I help companies improve their React applications through performance optimization, codebase cleanup, and architecture improvements.',
-    images: ['/images/avatar.png'],
+    images: ['/images/avatar.webp'],
   },
   robots: {
     index: true,
@@ -67,7 +67,7 @@ const jsonLd = {
   '@type': 'Person',
   name: 'Scott Cole',
   url: baseUrl,
-  image: `${baseUrl}/images/avatar.png`,
+  image: `${baseUrl}/images/avatar.webp`,
   email: 'scott.codes.dev@gmail.com',
   telephone: '+447552831815',
   jobTitle: 'Senior Software Engineer',

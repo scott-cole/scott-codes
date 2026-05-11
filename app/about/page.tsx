@@ -31,7 +31,7 @@ export default function About() {
           </div>
           <div className="flex justify-center lg:justify-end">
             <Image
-              src="/images/avatar.png"
+              src="/images/avatar.webp"
               alt="Scott Cole - Senior Software Engineer"
               width={320}
               height={320}

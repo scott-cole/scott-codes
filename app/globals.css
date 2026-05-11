@@ -26,6 +26,7 @@
   .shine-effect {
     position: relative;
     overflow: hidden;
+    transform: translateZ(0);
   }
   
   .shine-effect::before {
@@ -63,7 +64,7 @@
   }
 
   .card {
-    @apply bg-charcoal border border-slate-800 rounded-2xl hover:border-caribbean/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10;
+    @apply bg-charcoal border border-slate-800 rounded-2xl hover:border-caribbean/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 transform-gpu;
   }
 
   .tag {

@@ -107,7 +107,7 @@ export default function Home() {
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-3xl blur-3xl"></div>
                 <Image
-                  src="/images/avatar.png"
+                  src="/images/avatar.webp"
                   alt="Scott Cole - Senior Software Engineer"
                   width={384}
                   height={384}
@@ -201,41 +201,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-charcoal/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="section-label">About</span>
-              <h2 className="section-title mb-6">
-                A Results-Driven Engineer
-              </h2>
-              <div className="space-y-4 text-slate-300 leading-relaxed">
-                <p>
-                  I&apos;m a senior software engineer with over a decade of experience building web applications. I&apos;ve worked with everyone from early-stage startups to enterprise companies, helping them improve their codebases and deliver better products.
-                </p>
-                <p>
-                  My passion lies in solving complex technical challenges—whether it&apos;s optimizing performance, refactoring legacy code, or architecting scalable systems. I believe great software isn&apos;t just about features; it&apos;s about maintainability, performance, and developer experience.
-                </p>
-                <p>
-                  I pride myself on writing clean, well-tested code and helping teams establish best practices that scale. When I&apos;m not coding, I&apos;m mentoring developers and sharing knowledge with the community.
-                </p>
-              </div>
-            </div>
-            <div className="flex justify-center lg:justify-end">
-              <Image
-                src="/images/avatar.png"
-                alt="Scott Cole - Senior Software Engineer"
-                width={256}
-                height={256}
-                className="w-64 h-64 rounded-2xl object-cover border-4 border-slate-700 shadow-2xl"
-                placeholder="blur"
-                blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAEKADAAQAAAABAAAAEAAAAAA0VXHyAAACp0lEQVQoFSVSS0wTURSd9958a4dCC2mtLROMhaaCLoSFho1xpXFjjCujiXFj4t4FC1342Wnc6MaVBkiMiXEh0cjG30IJQUnQIqHUShumP9pCpzPTad/zPrjJzJu599x3zv2gbreLEBIYE8AQhk8Krk4bXFiUMRF5gDIB8TiYCGgG/wJDmHj2bt3Mtra3uo5FJFnRfLI/5I8cljWdUQo5AEaUUsYYQtiqFsrZZc9qhDRRZZ1qpb5LfIFgL/AEjDFfKMYYBTwGFnjbjVIls+TZraBbDWmCTxHCAWkn/89xPZBY3fjZqhUR5mARHtr1arkVUE47beLu2BXapgy7NnFrdmNb1g55Ha+aW1F7goSIUCWya6bTrGNCCMILP35XCoW19JrXdjWvqbfrXAbGrtWwakUuBhjcRhlcBGOoO97f22zYg+EQg1t3LCU8qIhYxoggBDAuCSpmXksmGE5RVVdyZjn7dzRplJots2IVtOV4IjFsRHCXMs+BBM4AQ4BWQeNVRVaGRoN9unBAf/klfSIZFRrFqcev86WaqsAAACnwGrCkYYHKErGs1tul3Oxy4cHM/IXJ5FA8HDSGVze2ns7Ob2yWJMUHo+AMcmAACshslm/enY7o4sVzJ6+dTk2mYl5P9I9pOY499zl9/fb0etnjkkC61ndQ8vfmS9trmcyp5MBA1EievSKMnWeRxNynxXbbhm4mR0ZGUikuiSeJsh47+ur9t2x2cz1fiRqJWGpcDgTffVz4uviLiEQS0dStG7rfx2DB9muWevovXb6aSh0ZHoqrekhVFaeDHr744DRtwzCePbk/MX4MlgjAMGa+nWCgrVwsmunv5uoirebezDw/PnHmzr1H+cIWhPYxkMOXD5Ttby90jBNyD91tthQgUuQ9CXvLz+8X/gMZxV0WVvxAnwAAAABJRU5ErkJggg=="
-                sizes="256px"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
@@ -266,7 +231,7 @@ export default function Home() {
                   )}
                 </button>
                 {openFaq === index && (
-                  <div className="px-6 pb-5">
+                  <div className="px-6 pb-5 pt-2">
                     <p className="text-slate-400 leading-relaxed">
                       {faq.answer}
                     </p>
