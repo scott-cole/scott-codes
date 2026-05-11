@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Navigation from '@/components/Navigation'
+import Reveal from '@/components/Reveal'
 import { X, ExternalLink } from 'lucide-react'
 
 interface CaseStudy {
@@ -79,14 +80,17 @@ export default function Projects() {
       <Navigation />
 
       <section className="max-w-7xl mx-auto px-6 pt-32 pb-20">
-        <div className="text-center mb-16">
-          <span className="section-label">Portfolio</span>
-          <h1 className="section-title">Projects</h1>
-        </div>
+        <Reveal>
+          <div className="text-center mb-16">
+            <span className="section-label">Portfolio</span>
+            <h1 className="section-title">Projects</h1>
+          </div>
+        </Reveal>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <div key={index} className="card p-6 flex flex-col">
+            <Reveal key={index} delay={index * 100}>
+              <div className="card p-6 flex flex-col">
               <h3 className="text-xl font-display font-semibold text-white mb-2 group-hover:text-caribbean transition-colors">
                 {project.title}
               </h3>
@@ -114,7 +118,8 @@ export default function Projects() {
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </div>
-            </div>
+              </div>
+            </Reveal>
           ))}
         </div>
       </section>

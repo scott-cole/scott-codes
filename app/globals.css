@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-hero {
+  animation: fade-in 0.8s ease-out forwards;
+}
+
+.animate-hero-delay-1 { animation-delay: 0.1s; }
+.animate-hero-delay-2 { animation-delay: 0.2s; }
+.animate-hero-delay-3 { animation-delay: 0.3s; }
+.animate-hero-delay-4 { animation-delay: 0.4s; }
+
 @layer base {
   :root {
     --caribbean: #3b82f6;

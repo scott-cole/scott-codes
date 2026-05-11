@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Navigation from "@/components/Navigation"
+import Reveal from "@/components/Reveal"
 import { ArrowUpRight, Zap, Code, Layers, Palette, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function Home() {
@@ -80,13 +81,13 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h1 className="text-6xl lg:text-7xl font-display font-bold text-white leading-tight">
+              <h1 className="text-6xl lg:text-7xl font-display font-bold text-white leading-tight animate-hero animate-hero-delay-1">
                 Software Engineer
               </h1>
-              <p className="text-xl text-slate-300 max-w-xl">
+              <p className="text-xl text-slate-300 max-w-xl animate-hero animate-hero-delay-2">
                 I help companies improve their React applications through performance optimization, codebase cleanup, and architecture improvements. 10+ years of building scalable software.
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 animate-hero animate-hero-delay-3">
                 <a
                   href="mailto:scott.codes.dev@gmail.com"
                   className="button button-primary shine-effect"
@@ -104,7 +105,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center lg:justify-end">
-              <div className="relative">
+              <div className="relative animate-hero animate-hero-delay-4">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-3xl blur-3xl"></div>
                 <Image
                   src="/images/avatar.webp"
@@ -125,29 +126,30 @@ export default function Home() {
 
       <section className="py-20 px-6 bg-charcoal/50">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="section-label">Services</span>
-            <h2 className="section-title">What I Do</h2>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <span className="section-label">Services</span>
+              <h2 className="section-title">What I Do</h2>
+            </div>
+          </Reveal>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <div
-                key={index}
-                className="card p-6"
-              >
-                <div className="flex items-center justify-center w-16 h-16 bg-midnight rounded-xl mb-6 group-hover:bg-caribbean/10 transition-colors">
-                  <div className="text-caribbean group-hover:text-blue-400 transition-colors">
-                    {service.icon}
+              <Reveal key={index} delay={index * 100}>
+                <div className="card p-6">
+                  <div className="flex items-center justify-center w-16 h-16 bg-midnight rounded-xl mb-6 group-hover:bg-caribbean/10 transition-colors">
+                    <div className="text-caribbean group-hover:text-blue-400 transition-colors">
+                      {service.icon}
+                    </div>
                   </div>
+                  <h3 className="text-xl font-display font-semibold text-white mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-slate-400 leading-relaxed">
+                    {service.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-display font-semibold text-white mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-slate-400 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -155,153 +157,161 @@ export default function Home() {
 
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="section-label">Recent Work</span>
-            <h2 className="section-title">Featured Projects</h2>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <span className="section-label">Recent Work</span>
+              <h2 className="section-title">Featured Projects</h2>
+            </div>
+          </Reveal>
           
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <div
-                key={index}
-                className="card p-8"
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="text-2xl font-display font-semibold text-white group-hover:text-caribbean transition-colors">
-                    {project.title}
-                  </h3>
-                  <ArrowRight className="w-5 h-5 text-slate-500 group-hover:text-caribbean group-hover:translate-x-1 transition-all" />
+              <Reveal key={index} delay={index * 100}>
+                <div className="card p-8">
+                  <div className="flex items-start justify-between mb-4">
+                    <h3 className="text-2xl font-display font-semibold text-white group-hover:text-caribbean transition-colors">
+                      {project.title}
+                    </h3>
+                    <ArrowRight className="w-5 h-5 text-slate-500 group-hover:text-caribbean group-hover:translate-x-1 transition-all" />
+                  </div>
+                  <p className="text-slate-400 mb-6 leading-relaxed">
+                    {project.description}
+                  </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag, tagIndex) => (
+                      <span
+                        key={tagIndex}
+                        className="tag"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-                <p className="text-slate-400 mb-6 leading-relaxed">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="tag"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              </Reveal>
             ))}
           </div>
           
-          <div className="text-center mt-12">
-            <a
-              href="/projects"
-              className="button button-outline shine-effect inline-flex items-center gap-2"
-            >
-              View all projects
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
+          <Reveal delay={200}>
+            <div className="text-center mt-12">
+              <a
+                href="/projects"
+                className="button button-outline shine-effect inline-flex items-center gap-2"
+              >
+                View all projects
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </Reveal>
         </div>
       </section>
 
 
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <span className="section-label">FAQ</span>
-            <h2 className="section-title">
-              Frequently Asked Questions
-            </h2>
-          </div>
+          <Reveal>
+            <div className="text-center mb-16">
+              <span className="section-label">FAQ</span>
+              <h2 className="section-title">
+                Frequently Asked Questions
+              </h2>
+            </div>
+          </Reveal>
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div
-                key={index}
-                className="bg-charcoal border border-slate-800 rounded-xl overflow-hidden"
-              >
-                <button
-                  className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-slate-800/50 transition-colors"
-                  onClick={() => setOpenFaq(openFaq === index ? null : index)}
-                >
-                  <span className="text-lg font-display font-medium text-white pr-8">
-                    {faq.question}
-                  </span>
-                  {openFaq === index ? (
-                    <ChevronUp className="w-5 h-5 text-caribbean flex-shrink-0" />
-                  ) : (
-                    <ChevronDown className="w-5 h-5 text-slate-500 flex-shrink-0" />
+              <Reveal key={index} delay={index * 80}>
+                <div className="bg-charcoal border border-slate-800 rounded-xl overflow-hidden">
+                  <button
+                    className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-slate-800/50 transition-colors"
+                    onClick={() => setOpenFaq(openFaq === index ? null : index)}
+                  >
+                    <span className="text-lg font-display font-medium text-white pr-8">
+                      {faq.question}
+                    </span>
+                    {openFaq === index ? (
+                      <ChevronUp className="w-5 h-5 text-caribbean flex-shrink-0" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-slate-500 flex-shrink-0" />
+                    )}
+                  </button>
+                  {openFaq === index && (
+                    <div className="px-6 pb-5 pt-2">
+                      <p className="text-slate-400 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
                   )}
-                </button>
-                {openFaq === index && (
-                  <div className="px-6 pb-5 pt-2">
-                    <p className="text-slate-400 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
-              </div>
+                </div>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-charcoal/50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
-            Ready to Improve Your Codebase?
-          </h2>
-          <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-            Let&apos;s discuss how I can help you optimize performance, clean up your code, and build better software.
-          </p>
-          <a
-            href="mailto:scott.codes.dev@gmail.com"
-            className="button button-primary shine-effect inline-flex items-center gap-2 text-lg px-8 py-4"
-          >
-            Get in touch
-            <ArrowUpRight className="w-5 h-5" />
-          </a>
-        </div>
-      </section>
-
-      <footer className="py-12 px-6 border-t border-slate-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-slate-500">
-              &copy; {new Date().getFullYear()} Scott.Codes. All rights reserved.
+      <Reveal>
+        <section className="py-20 px-6 bg-charcoal/50">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl lg:text-5xl font-display font-bold text-white mb-6">
+              Ready to Improve Your Codebase?
+            </h2>
+            <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+              Let&apos;s discuss how I can help you optimize performance, clean up your code, and build better software.
             </p>
-            <div className="flex items-center gap-6">
-              <a
-                href="https://github.com/scott-cole"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-caribbean transition-colors"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/scott-cole-1a051a3b5/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-caribbean transition-colors"
-              >
-                LinkedIn
-              </a>
-              <a
-                href="mailto:scott.codes.dev@gmail.com"
-                className="text-slate-400 hover:text-caribbean transition-colors"
-              >
-                Email
-              </a>
-              <a
-                href="https://wa.me/447552831815"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-slate-400 hover:text-caribbean transition-colors"
-              >
-                WhatsApp
-              </a>
+            <a
+              href="mailto:scott.codes.dev@gmail.com"
+              className="button button-primary shine-effect inline-flex items-center gap-2 text-lg px-8 py-4"
+            >
+              Get in touch
+              <ArrowUpRight className="w-5 h-5" />
+            </a>
+          </div>
+        </section>
+      </Reveal>
+
+      <Reveal>
+        <footer className="py-12 px-6 border-t border-slate-800">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <p className="text-slate-500">
+                &copy; {new Date().getFullYear()} Scott.Codes. All rights reserved.
+              </p>
+              <div className="flex items-center gap-6">
+                <a
+                  href="https://github.com/scott-cole"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-caribbean transition-colors"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/scott-cole-1a051a3b5/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-caribbean transition-colors"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="mailto:scott.codes.dev@gmail.com"
+                  className="text-slate-400 hover:text-caribbean transition-colors"
+                >
+                  Email
+                </a>
+                <a
+                  href="https://wa.me/447552831815"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-slate-400 hover:text-caribbean transition-colors"
+                >
+                  WhatsApp
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </Reveal>
     </main>
   )
 }
