@@ -89,8 +89,8 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
-            <Reveal key={index} delay={index * 100}>
-              <div className="card p-6 flex flex-col">
+            <Reveal key={index} delay={index * 100} className="h-full">
+              <div className="card p-6 h-full flex flex-col">
               <h3 className="text-xl font-display font-semibold text-white mb-2 group-hover:text-caribbean transition-colors">
                 {project.title}
               </h3>

@@ -135,8 +135,8 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service, index) => (
-              <Reveal key={index} delay={index * 100}>
-                <div className="card p-6">
+              <Reveal key={index} delay={index * 100} className="h-full">
+                <div className="card p-6 h-full">
                   <div className="flex items-center justify-center w-16 h-16 bg-midnight rounded-xl mb-6 group-hover:bg-caribbean/10 transition-colors">
                     <div className="text-caribbean group-hover:text-blue-400 transition-colors">
                       {service.icon}
@@ -166,18 +166,18 @@ export default function Home() {
           
           <div className="grid md:grid-cols-2 gap-6">
             {projects.map((project, index) => (
-              <Reveal key={index} delay={index * 100}>
-                <div className="card p-8">
+              <Reveal key={index} delay={index * 100} className="h-full">
+                <div className="card p-8 h-full flex flex-col">
                   <div className="flex items-start justify-between mb-4">
                     <h3 className="text-2xl font-display font-semibold text-white group-hover:text-caribbean transition-colors">
                       {project.title}
                     </h3>
                     <ArrowRight className="w-5 h-5 text-slate-500 group-hover:text-caribbean group-hover:translate-x-1 transition-all" />
                   </div>
-                  <p className="text-slate-400 mb-6 leading-relaxed">
+                  <p className="text-slate-400 mb-6 leading-relaxed flex-1">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mt-auto">
                     {project.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
