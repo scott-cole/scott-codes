@@ -1,78 +1,72 @@
-# Portfolio
+# Scott.Codes
 
-A professional portfolio website built with Next.js 14, TypeScript, and Tailwind CSS.
+Personal portfolio and freelance presence for **Scott Cole** — Senior Software Engineer specializing in React, TypeScript, and web performance.
 
-## 🚀 Tech Stack
+Built with Next.js 14, TypeScript, and Tailwind CSS.
 
-- **Next.js 14** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling
-- **Lucide React** - Modern icon library
+## Tech Stack
 
-## 📁 Project Structure
+- **Next.js 14** — App Router, static generation, image optimization
+- **TypeScript** — Full type safety
+- **Tailwind CSS** — Utility-first styling with custom design system
+- **Lucide React** — Consistent iconography
+
+## Project Structure
 
 ```
 app/
-├── layout.tsx          # Root layout with metadata
-├── page.tsx            # Home page with hero section
-├── about/page.tsx       # About section
-├── projects/page.tsx    # Projects showcase
-├── contact/page.tsx     # Contact form
-└── globals.css          # Global styles with Tailwind
+├── layout.tsx          # Root layout with SEO metadata & JSON-LD
+├── sitemap.ts          # Auto-generated sitemap
+├── page.tsx            # Home page — hero, services, featured projects, FAQ
+├── about/page.tsx      # About page — experience, skills
+├── projects/page.tsx   # Project showcase with case study modals
+└── contact/page.tsx    # Contact page with form & links
 
 components/
-├── Navigation.tsx       # Site navigation
-└── ui/
-    └── Button.tsx      # Reusable button component
+├── Navigation.tsx      # Fixed top navigation with logo
+└── WhatsAppButton.tsx  # Floating WhatsApp contact button
+
+public/
+├── favicon.svg         # SVG favicon
+├── robots.txt          # Search engine crawling config
+├── logo-white.png      # Navbar logo
+└── images/avatar.png   # Profile avatar
 ```
 
-## 🛠️ Getting Started
+## Features
 
-### Prerequisites
-- Node.js 18+
-- npm, yarn, or pnpm
+- Dark theme with blue accent colour scheme
+- Fully responsive (mobile, tablet, desktop)
+- SEO-optimised with structured data (JSON-LD), sitemap, Open Graph, Twitter cards
+- Case studies with modal detail views for each project
+- Floating WhatsApp contact button
+- Blur placeholder loading for images
+- Performance-optimised with Next.js Image (AVIF/WebP, responsive srcsets)
 
-### Installation
+## Getting Started
+
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000).
 
-## 🎯 Available Scripts
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Production build |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+| `npm run typecheck` | TypeScript type checking |
+
+## Deployment
+
+Recommended for Vercel:
 
 ```bash
-npm run dev        # Start development server
-npm run build      # Build for production
-npm run start      # Start production server
-npm run lint       # Run ESLint
-npm run typecheck  # TypeScript type checking
-```
-
-## 🌐 Deployment
-
-### Vercel (Recommended)
-```bash
-# Install Vercel CLI
 npm i -g vercel
-
-# Deploy
 vercel
 ```
-
-## 🔧 Features
-
-- ✅ Responsive design (mobile, tablet, desktop)
-- ✅ Fast page loads (Next.js optimization)
-- ✅ SEO friendly (metadata and structure)
-- ✅ Accessible (semantic HTML and ARIA)
-- ✅ Modern design (gradient hero, clean layout)
-- ✅ Contact form ready
-- ✅ Project showcase
-- ✅ Social links
-
-Built with Next.js 14 and Tailwind CSS

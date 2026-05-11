@@ -42,6 +42,18 @@ export default function Contact() {
               </div>
 
               <div className="card p-6">
+                <h3 className="text-sm font-mono text-caribbean uppercase tracking-wider mb-1">WhatsApp</h3>
+                <a
+                  href="https://wa.me/447552831815"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-caribbean transition-colors text-lg font-medium"
+                >
+                  Message on WhatsApp
+                </a>
+              </div>
+
+              <div className="card p-6">
                 <h3 className="text-sm font-mono text-caribbean uppercase tracking-wider mb-1">GitHub</h3>
                 <a
                   href="https://github.com/scott-cole"

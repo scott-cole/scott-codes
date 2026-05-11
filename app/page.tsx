@@ -325,6 +325,14 @@ export default function Home() {
               >
                 Email
               </a>
+              <a
+                href="https://wa.me/447552831815"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-caribbean transition-colors"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>
